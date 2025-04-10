@@ -83,7 +83,6 @@ action :enable do
     )
     notifies :restart, 'service[consul]' if new_resource.restart_on_update
     action %i(create enable)
-    weight 1
   end
 
   service 'consul' do
