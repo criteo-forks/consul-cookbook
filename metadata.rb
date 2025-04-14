@@ -4,7 +4,7 @@ maintainer_email 'jbellone@bloomberg.net'
 license 'Apache-2.0'
 description 'Application cookbook which installs and configures Consul.'
 long_description 'Application cookbook which installs and configures Consul.'
-version '4.2.7'
+version '4.2.8'
 
 recipe 'consul::default', 'Installs and configures the Consul service.'
 recipe 'consul::client_gem', 'Installs the Consul Ruby client as a gem.'
@@ -17,6 +17,7 @@ supports 'arch'
 supports 'windows'
 
 depends 'nssm', '>= 3.42.0'
+depends 'resource-weight'
 
 source_url 'https://github.com/johnbellone/consul-cookbook' if respond_to?(:source_url)
 issues_url 'https://github.com/johnbellone/consul-cookbook/issues' if respond_to?(:issues_url)
